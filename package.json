@@ -1,0 +1,16 @@
+{
+  "name": "yandex-music-electron",
+  "version": "0.0.1",
+  "description": "yandex_music_electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --linux AppImage"
+  },
+  "author": "Artem Podlegaev",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.2.3",
+    "electron-builder": "^26.0.12"
+  }
+} 

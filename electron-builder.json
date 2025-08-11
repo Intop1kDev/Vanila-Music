@@ -1,0 +1,9 @@
+{
+  "appId": "ru.yandex.music.electron",
+  "productName": "yandex_music_electron",
+  "linux": {
+    "target": ["AppImage"],
+    "icon": "icon.png",
+    "category": "AudioVideo"
+  }
+} 
