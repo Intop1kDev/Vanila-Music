@@ -5,12 +5,36 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --linux AppImage"
+    "build:win-portable": "electron-builder --win --config.win.target=portable",
+    "build:win-nsis": "electron-builder --win --config.win.target=nsis",
+    "build:win-zip": "electron-builder --win --config.win.target=zip",
+    "pack:win": "electron-builder --win --dir"
   },
-  "author": "Im Sterford",
+  "author": "dev",
   "license": "MIT",
+  "build": {
+    "appId": "com.yandex.music-electron",
+    "productName": "Yandex Music",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      "**/*.html",
+      "**/*.css",
+      "**/*.js",
+      "assets/icon.ico",
+      "!node_modules/**/*",
+      "!dist/**/*"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "assets/icon.ico"
+    }
+  },
   "devDependencies": {
     "electron": "^28.2.3",
     "electron-builder": "^26.0.12"
   }
-} 
+}
